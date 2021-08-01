@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Bill Niblock']
   spec.email         = ['bill@theinternetvagabond.com']
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
+  spec.metadata["allowed_push_host"] = 'https://rubygems.org'
 
   spec.summary       = 'Sunder a single audio file into smaller tracks.'
   spec.homepage      = 'https://www.github.com/vagabondazulien/sunder'
