@@ -1,36 +1,19 @@
-# frozen_string_literal: true
-
-require_relative "lib/sunder/version"
-
 Gem::Specification.new do |spec|
-  spec.name          = "sunder"
-  spec.version       = Sunder::VERSION
-  spec.authors       = ["Bill Niblock"]
-  spec.email         = ["azulien@protonmail.com"]
+  spec.name          = 'sunder'
+  spec.version       = '0.1.0'
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.required_ruby_version = ">= 2.4.0"
+  spec.authors       = ['Bill Niblock']
+  spec.email         = ['bill@theinternetvagabond.com']
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.summary       = 'Sunder a single audio file into smaller tracks.'
+  spec.homepage      = 'https://www.github.com/vagabondazulien/sunder'
+  spec.license       = 'WTFPL'
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
-  end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.executables   << 'sunder'
+  spec.files         = Dir['lib/**/*.rb'] +
+                       ['bin/sunder']
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
-
-  # For more information and examples about making a new gem, checkout our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_dependency "thor"
 end

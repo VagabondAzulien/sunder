@@ -1,0 +1,29 @@
+# Every input source needs a configuration file.
+# Required fields are marked
+#
+# The default naming schemes:
+#   Directory: "year - album_artist - title"
+#   Tracks: "01. Track Number 1.format"
+---
+# Title: An optional title, used for directory naming
+title: Copyright Free Music
+
+# Year: An optional publication year, used for directory naming
+year: 2021
+
+# Album Artist: An option artist name, used for directory naming
+album_artist: Vagabond Azulien
+
+# Tracks [REQUIRED]: A list of tracks. 
+#     The key is the time at which the track ends. It can be provided as a
+#     timestamp (as shown) or as a number of seconds. Milliseconds are allowed.
+#
+#     The value is the name of the track.
+tracks:
+  "02:00": Track Number 1
+  "240.5": Track Number 2
+  "06:00": Track Number 3
+
+# Format: The file format for tracks. Must be of a type supported by ffmpeg. If
+#         not provided, defaults to mp3
+format: "mp3"
